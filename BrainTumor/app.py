@@ -6,7 +6,7 @@ import requests
 import io
 
 # Load the trained model
-MODEL_PATH = "brain_tumor_model.h5"  # Change this to your model's path
+MODEL_PATH = os.path.join(os.path.dirname(__file__), "brain_tumor_model.h5")
 model = tf.keras.models.load_model(MODEL_PATH)
 
 # Function to preprocess images
