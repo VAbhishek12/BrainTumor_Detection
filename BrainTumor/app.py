@@ -7,18 +7,27 @@ from PIL import Image
 import requests
 import io
 
-# Load the trained model
-MODEL_PATH = "https://github.com/VAbhishek12/BrainTumor_Detection/blob/main/BrainTumor/brain_tumor_model.h5"
-LABEL_ENCODER_PATH = "https://github.com/VAbhishek12/BrainTumor_Detection/blob/main/BrainTumor/label_encoder.pkl"
+# Google Drive model and label encoder links (use your own)
+MODEL_URL = "https://drive.google.com/file/d/1njXHe--omta3T9OtFYAEJCghOsW4UBHO/view?usp=drive_link"
+LABEL_ENCODER_URL = "https://drive.google.com/file/d/1WJBe8ePRoWJ9eYaaKVTe5l5DQIqUbytd/view?usp=drive_link"
 
-# Check if files exist
-if not os.path.exists(MODEL_PATH):
-    st.error("❌ Model file 'brain_tumor_model.h5' not found. Please upload it to proceed.")
-    st.stop()
+# File paths
+MODEL_PATH = "brain_tumor_model.h5"
+LABEL_ENCODER_PATH = "label_encoder.pkl"
 
-if not os.path.exists(LABEL_ENCODER_PATH):
-    st.error("❌ Label encoder file 'label_encoder.pkl' not found. Please upload it to proceed.")
-    st.stop()
+# Function to download files from Google Drive
+def download_file(url, output_path):
+    if not os.path.exists(output_path):
+        with st.spinner(f"📥 Downloading {output_path}..."):
+            response = requests.get(url, stream=True)
+            with open(output_path, "wb") as file:
+                for chunk in response.iter_content(chunk_size=8192):
+                    file.write(chunk)
+        st.success(f"✅ {output_path} downloaded!")
+
+# Download model & encoder if not present
+download_file(MODEL_URL, MODEL_PATH)
+download_file(LABEL_ENCODER_URL, LABEL_ENCODER_PATH)
 
 # Load the model
 model = tf.keras.models.load_model(MODEL_PATH)
