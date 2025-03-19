@@ -8,8 +8,8 @@ import requests
 import io
 
 # Load the trained model
-MODEL_PATH = "brain_tumor_model.h5"
-LABEL_ENCODER_PATH = "label_encoder.pkl"
+MODEL_PATH = "https://github.com/VAbhishek12/BrainTumor_Detection/blob/main/BrainTumor/brain_tumor_model.h5"
+LABEL_ENCODER_PATH = "https://github.com/VAbhishek12/BrainTumor_Detection/blob/main/BrainTumor/label_encoder.pkl"
 
 # Check if files exist
 if not os.path.exists(MODEL_PATH):
