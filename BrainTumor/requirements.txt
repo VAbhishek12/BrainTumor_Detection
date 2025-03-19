@@ -1,8 +1,8 @@
 streamlit
 tensorflow==2.18.0
 numpy
-Pillow
+pillow
 requests
-streamlit
-pickle5
-scikit-learn 
+h5py
+scikit-learn
+gdown
