@@ -2,8 +2,7 @@
 
 This project implements a Convolutional Neural Network (CNN) to detect brain tumors from MRI scans. The goal is to assist in early detection and diagnosis using automated deep learning models trained on medical imaging data.
 
-![Banner](assets/banner.png)
-
+![Banner](https://github.com/user-attachments/assets/51b7be5e-d170-4e55-8f1d-638a689f1ef8)
 ---
 
 ## 🚀 Project Overview
@@ -34,7 +33,7 @@ Brain tumors, if not diagnosed early, can pose serious health risks. This projec
 - Dropout (to prevent overfitting)
 - Output Layer: Softmax for 2 classes (Tumor, No Tumor)
 
-![Model Architecture](assets/model_architecture.png)
+![ModelArchitectureSummary](https://github.com/user-attachments/assets/9e4aca7f-4246-4baf-96f5-f3f3a511c244)
 
 ---
 
@@ -52,16 +51,17 @@ Brain tumors, if not diagnosed early, can pose serious health risks. This projec
 ### 📉 Training Results
 
 #### ✅ Accuracy Curve
-![Accuracy](assets/accuracy_curve.png)
+![AccuracyVsValidation](https://github.com/user-attachments/assets/ce7a6bd7-f66d-4f97-9a0d-02ac21f69e48)
 
 #### ❌ Loss Curve
-![Loss](assets/loss_curve.png)
+![LossVsValidation](https://github.com/user-attachments/assets/f56e732e-d986-4676-a821-a83571d5a99b)
+
 
 ---
 
-### 🔍 Confusion Matrix
+### 🔍 Training Curve
 
-![Confusion Matrix](assets/confusion_matrix.png)
+![TrainingVSValidation](https://github.com/user-attachments/assets/569ebe32-e99f-4e94-83b3-e35a2fdd9d52)
 
 ---
 
@@ -69,8 +69,8 @@ Brain tumors, if not diagnosed early, can pose serious health risks. This projec
 
 | MRI Image | Predicted Label | Ground Truth |
 |-----------|------------------|---------------|
-| ![img1](assets/sample1.png) | Tumor         | Tumor        |
-| ![img2](assets/sample2.png) | No Tumor      | No Tumor     |
+|![Yes](https://github.com/user-attachments/assets/efd3914e-1eff-45f2-8e5a-d777885bf935)| Tumor        | Tumor        |
+|![No](https://github.com/user-attachments/assets/b91eaf22-337d-47ea-a2ad-4b8e8672e31f)| No Tumor      | No Tumor     |
 
 ---
 
