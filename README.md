@@ -105,8 +105,18 @@ jupyter notebook BrainTumourDetection.ipynb
 from tensorflow.keras.models import load_model
 model = load_model('brain_tumor_model.h5')
 ```
+## 🧪 Live Demo
+
+🚀 [Click here to try the Brain Tumor Detection Streamlit App](https://braintumourdetction-12.streamlit.app/)
+
 
 # Future Work
  Improve accuracy using transfer learning (e.g., VGG16, ResNet)
  
  Add support for 3D volumetric scans (CT/MRI slices)
+## 📞 Contact
+ Vedula Abhishek
+ 
+ M.Tech CSE(AI)
+- 💼 [LinkedIn – Vedula Abhishek](https://www.linkedin.com/in/vedula-abhishek-115504214/)
+- 📧 Email: vedulaabhishek12@gmail.com
